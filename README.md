@@ -14,8 +14,6 @@ This project uses knowledge of **blockchain**, **cryptography**, and** B/S archi
 
 ![image](https://github.com/1mocat/Blockchain-project/assets/91671140/fa67dd34-57fd-4489-9315-583cb74ca831)
 
-![image](https://github.com/1mocat/Blockchain-project/assets/91671140/f2d8a55d-43d6-4c3a-ab44-23a37c2ef116)
-
 ![image](https://github.com/1mocat/Blockchain-project/assets/91671140/2bed969c-f4a1-4461-a0e8-a25d47d1e697)
 
 
