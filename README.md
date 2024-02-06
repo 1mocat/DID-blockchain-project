@@ -5,7 +5,7 @@ DID(Digital Inheritance Deliverer) , designed to enable secure digital asset/inh
 
 It has complete functions, beautiful interface, certain practical value, and should be previewed normally on the browser (tested on Ubuntu 20.04).
 
-This project uses knowledge of **blockchain**, **cryptography**, and** B/S architecture**. Specifically, **Bootstrap(Html css js),Sass,JavaScript,Solidity,Truffle and Ganache** and other techniques are used to develop.
+This project uses knowledge of **blockchain**, **cryptography**, and B/S architecture. Specifically, **Bootstrap(Html css js),Sass,JavaScript,Solidity,Truffle and Ganache** and other techniques are used to develop.
 
 ## Preview
 
