@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+
+
+
+<head>
+	<title>Strata by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets_account/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+
+	<header id="header">
+		<div class="inner">
+			<a href="#" class="image avatar"><img src="images/yimaoren.jpg" alt="" /></a>
+			<h1>I am <strong>Yimaoren</strong>, a cat<br /></h1>
+			<h1>This is Digital Inheritance Deliverer</h1>
+			<h1><a href="index.html">Back to Intro</a></h1>
+			<h1><a href="UserAgreement.html">Check user terms</a></h1>
+			<h1><a href="NFTList.html">My Account</a></h1>
+			<h1><a href="NFTList.html">My inheritance</a></h1>
+			<h1><a href="AuctionList.html">Inheritance List</a></h1>
+		</div>
+	</header>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- One -->
+		<section id="one">
+			<header class="major">
+				
+				<div id="countdown"></div>
+				
+
+				<h2>My Account Information<br></h2>
+				
+
+
+			</header>
+
+			<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia
+				ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque
+				commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi
+				lorem vulputate lorem neque cubilia.</p>
+
+
+
+
+
+
+			<ul class="actions">
+				<button onclick="" class="button">Update My Active Status </button>
+				<button onclick="" class="button">Expire My Active Status </button>
+			</ul>
+		</section>
+
+		<!-- Three -->
+		<section id="three">
+			<h2>Get In Touch</h2>
+			<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu
+				lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+			<div class="row">
+				<div class="col-8 col-12-small">
+					<form method="post" action="#">
+						<div class="row gtr-uniform gtr-50">
+							<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name"
+									placeholder="Name" /></div>
+							<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email"
+									placeholder="Email" /></div>
+							<div class="col-12"><textarea name="message" id="message" placeholder="Message"
+									rows="4"></textarea></div>
+						</div>
+					</form>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" /></li>
+					</ul>
+				</div>
+				<div class="col-4 col-12-small">
+					<ul class="labeled-icons">
+						<li>
+							<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+							1234 Somewhere Rd.<br />
+							Nashville, TN 00000<br />
+							United States
+						</li>
+						<li>
+							<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+							000-000-0000
+						</li>
+						<li>
+							<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+							<a href="#">hello@untitled.tld</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+
+
+	</div>
+
+
+
+	<!-- Scripts -->
+	<script src="assets_account/js/jquery.min.js"></script>
+	<script src="assets_account/js/jquery.poptrox.min.js"></script>
+	<script src="assets_account/js/browser.min.js"></script>
+	<script src="assets_account/js/breakpoints.min.js"></script>
+	<script src="assets_account/js/util.js"></script>
+	<script src="assets_account/js/main.js"></script>
+
+<style>
+					#countdown {
+						font-size: 16px;
+						text-align: center;
+					}
+				</style>
+				<script>
+					// 目标日期：当前日期 + 30 天
+					const targetDate = new Date();
+					targetDate.setDate(targetDate.getDate() + 30);
+
+					// 更新倒计时的函数
+					function updateCountdown() {
+						const currentDate = new Date();
+						const timeDifference = targetDate - currentDate;
+
+						if (timeDifference <= 0) {
+							document.getElementById('countdown').innerHTML = '倒计时结束';
+						} else {
+							const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+							const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+							const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+							const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+							const countdownText = `time left before the account's active status expires ${days} 天 ${hours} 时 ${minutes} 分 ${seconds} 秒`;
+							document.getElementById('countdown').innerHTML = countdownText;
+						}
+					}
+					// 初始调用更新倒计时
+					updateCountdown();
+					// 每秒更新一次倒计时
+					setInterval(updateCountdown, 1000);
+
+				</script>
+
+
+</body>
+
+</html>

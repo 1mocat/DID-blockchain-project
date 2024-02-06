@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>三个框并排</title>
+  <style>
+    .container {
+      display: flex; /* 使用 flex 布局 */
+      justify-content: space-between; /* 均匀分布在容器中 */
+    }
+
+    .box {
+      width: 30%; /* 每个框的宽度 */
+      padding: 20px; /* 内边距 */
+      border: 1px solid #000; /* 边框样式 */
+      text-align: center; /* 文本居中 */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <h2>框 1</h2>
+      <p>这是框 1 的内容</p>
+    </div>
+    <div class="box">
+      <h2>框 2</h2>
+      <p>这是框 2 的内容</p>
+    </div>
+    <div class="box">
+      <h2>框 3</h2>
+      <p>这是框 3 的内容</p>
+    </div>
+  </div>
+</body>
+</html>

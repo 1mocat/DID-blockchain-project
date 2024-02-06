@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+
+
+
+<head>
+	<title>Strata by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets_account/css/main.css" />
+	<style>
+		#countdown {
+			font-size: 16px;
+			color: rgb(240, 55, 123);
+		}
+
+		.container {
+			display: grid;
+			/* 使用 grid 布局 */
+			grid-template-columns: repeat(3, 1fr);
+			/* 创建三列，均匀分布空间 */
+			gap: 20px;
+			/* 间隔大小 */
+		}
+
+		.box {
+			padding: 20px;
+			/* 内边距 */
+			border: 1px solid #000;
+			/* 边框样式 */
+			text-align: center;
+			/* 文本居中 */
+		}
+	</style>
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+
+	<header id="header">
+		<div class="inner">
+			<a href="#" class="image avatar"><img src="images/yimaoren.jpg" alt="" /></a>
+			<h1>I am <strong>Yimaoren</strong>, a cat<br /></h1>
+			<h1>This is Digital Inheritance Deliverer</h1>
+			<h1><a href="index.html">Back to Intro</a></h1>
+			<h1><a href="UserAgreement.html">Check user terms</a></h1>
+			<h1><a href="NFTList.html">My Account</a></h1>
+			<h1><a href="NFTList.html">My inheritance</a></h1>
+			<h1><a href="AuctionList.html">Inheritance List</a></h1>
+		</div>
+	</header>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- One -->
+		<section id="one">
+			<header class="major">
+				<h2>My Account Information</h2>
+				<div id="countdown"></div>
+				<script>
+					// 目标日期：当前日期 + 30*6 天
+					const targetDate = new Date();
+					targetDate.setDate(targetDate.getDate() + 30 * 6);
+
+					// 更新倒计时的函数
+					function updateCountdown() {
+						const currentDate = new Date();
+						const timeDifference = targetDate - currentDate;
+
+						if (timeDifference <= 0) {
+							document.getElementById('countdown').innerHTML = '倒计时结束';
+						} else {
+							const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+							const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+							const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+							const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+							const countdownText = `Time Left Before Active Status Expires : ${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+							document.getElementById('countdown').innerHTML = countdownText;
+						}
+					}
+					// 初始调用更新倒计时
+					updateCountdown();
+					// 每秒更新一次倒计时
+					setInterval(updateCountdown, 1000);
+				</script>
+			</header>
+
+			<p><br>If you haven't logged in or updated your active status in a period of time(6 months),your active
+				status will expire ,and then inheritance will be permitted, the heirs you designated will be able to
+				inherit.
+				<br>
+			</p>
+			<p> Click on the buttons below to update (or expire) your active status. </p>
+			<ul class="actions">
+				<button onclick="" class="button">Update My Active Status </button>
+				<button onclick="" class="button">Expire My Active Status </button>
+			</ul>
+		</section>
+		<!-- Three -->
+
+		
+
+
+		<section id="three">
+			<h2>Instructions for use</h2>
+			<p>Please Follow these three steps :</p>
+			<div class="container">
+				<div class="box">
+					<a class="image fit"><img src="images/bind.jpg" title="Bind" alt="" /></a>
+					<h2>1.Bind</h2>
+					<p>Bind to the people you want to inherit using his public key</p>
+				</div>
+				<div class="box">
+					<a class="image fit"><img src="images/assign.jpg" title="Designate" alt="" /></a>
+					<h2>2.Designate</h2>
+					<p>Designate property distribution</p>
+				</div>
+				<div class="box">
+					<a class="image fit"><img src="images/open.png" title="Inherit" alt="" /></a>
+					<h2>3.Inherit</h2>
+					<p>这是框 3 的内容</p>
+				</div>
+			</div>
+		</section>
+
+
+
+	</div>
+
+
+
+	<!-- Scripts -->
+	<script src="assets_account/js/jquery.min.js"></script>
+	<script src="assets_account/js/jquery.poptrox.min.js"></script>
+	<script src="assets_account/js/browser.min.js"></script>
+	<script src="assets_account/js/breakpoints.min.js"></script>
+	<script src="assets_account/js/util.js"></script>
+	<script src="assets_account/js/main.js"></script>
+
+
+
+
+</body>
+
+</html>

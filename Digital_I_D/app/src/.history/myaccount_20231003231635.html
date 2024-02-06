@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html>
+
+
+
+<head>
+	<title>Strata by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets_account/css/main.css" />
+	<style>
+		#countdown {
+			font-size: 16px;
+			color: rgb(240, 55, 123);
+		}
+
+		.container {
+			display: grid;
+			/* 使用 grid 布局 */
+			grid-template-columns: repeat(3, 1fr);
+			/* 创建三列，均匀分布空间 */
+			gap: 20px;
+			/* 间隔大小 */
+		}
+
+		.box {
+			padding: 20px;
+			/* 内边距 */
+			border: 1px solid #000;
+			/* 边框样式 */
+			text-align: center;
+			/* 文本居中 */
+		}
+
+		.solid-line {
+			border: none;
+			border-top: 1px solid #000;
+			/* 使用 dashed 边框样式和颜色 */
+			margin: 0px;
+			/* 设置上下间距 */
+			height: 1px;
+			/* 减小实线的高度 */
+		}
+
+		.content {
+			padding: 20px;
+		}
+
+		.custom-button-left {
+			margin-left: 100px;
+			/* 添加右侧边距，根据需要调整间距大小 */
+		}
+		.custom-button-left {
+			margin-right: 100px;
+			/* 添加右侧边距，根据需要调整间距大小 */
+		}
+	</style>
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+
+	<header id="header">
+		<div class="inner">
+			<a href="#" class="image avatar"><img src="images/yimaoren.jpg" alt="" /></a>
+			<h1>I am <strong>Yimaoren</strong>, a cat<br /></h1>
+			<h1>This is Digital Inheritance Deliverer</h1>
+			<h1><a href="index.html">Back to Intro</a></h1>
+			<h1><a href="UserAgreement.html">Check User Terms</a></h1>
+			<h1><a href="myaccount.html" style="color:#49bf9d">My Account</a></h1>
+			<h1><a href="my_inher.html">Designate an Inheritance</a></h1>
+			<h1><a href="carry_inher.html">Carry on an Inheritance</a></h1>
+		</div>
+	</header>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- One -->
+		<section id="one" class="section-container">
+			<header class="major">
+				<h2>My Account Information</h2>
+				<div id="countdown"></div>
+				<script>
+					// 目标日期：当前日期 + 30*6 天
+					const targetDate = new Date();
+					targetDate.setDate(targetDate.getDate() + 30 * 6);
+
+					// 更新倒计时的函数
+					function updateCountdown() {
+						const currentDate = new Date();
+						const timeDifference = targetDate - currentDate;
+
+						if (timeDifference <= 0) {
+							document.getElementById('countdown').innerHTML = '倒计时结束';
+						} else {
+							const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+							const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+							const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+							const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+							const countdownText = `Time Left Before Active Status Expires : ${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+							document.getElementById('countdown').innerHTML = countdownText;
+						}
+					}
+					// 初始调用更新倒计时
+					updateCountdown();
+					// 每秒更新一次倒计时
+					setInterval(updateCountdown, 1000);
+				</script>
+			</header>
+
+			<p><br><u>If you haven't logged in or updated your active status in a period of time(6 months),your active
+					status will expire ,and then inheritance will be permitted, the heirs you designated will be able to
+					inherit.</u>
+			</p>
+			<p><u> Click on the buttons below to update (or expire) your active status. </u> </p>
+			
+			<div class="row">
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/bloom.jpg" class="image fit thumb"><img src="images/bloom.jpg" alt="" /></a>
+					<ul class="actions">
+						<button onclick="" class="button custom-button-left " >Update My Active Status</button>
+						
+					</ul>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/wilt.jpg" class="image fit thumb"><img src="images/wilt.jpg" alt="" /></a>
+					<button onclick="" class="button custom-button-left">Expire My Active Status</button>
+					
+				</article>
+			</div>
+
+		</section>
+		<section id="two">
+
+			<h2>Check My Bindings</h2>
+			<p><u>The following bindings already exist :</u></p>
+			<div class="table-margin">
+				<table class="table table-bordered table-header">
+					<thead>
+						<tr>
+							<td class="w15">Successor's Public Key</td>
+							<td class="w15">Successor's Name</td>
+							<td class="w15">Realationship</td>
+
+						</tr>
+					</thead>
+					<tbody id="details"></tbody>
+				</table>
+				<br><br><br>
+			</div>
+				<h2>Add My Bindings</h2>
+				<p><u>The following bindings already exist :</u></p>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field half"><input type="text" name="Successor's Public Key" placeholder="Successor's Public Key" /></div>
+							<div class="field half"><input type="text" name="Successor's Name" placeholder="Successor's Name" /></div>
+							<div class="field half"><input type="text" name="Realationship" placeholder="Realationship" /></div>
+						</div>
+						<br>
+						
+					</form>
+					<ul class="actions">
+						<button onclick="" class="button custom-button-left" style="font-size: 1.2em; height: 3.5em; width: 2em;">Add This binding</button>
+					</ul>
+					
+				
+				
+		</section>
+		
+		<!-- Three -->
+		<section id="three">
+			<h2>Instructions for use</h2>
+			<p><u>Please Follow these three steps :</u></p>
+			<div class="container">
+				<div class="box">
+					<a class="image fit"><img src="images/bind.jpg" title="Bind" alt="" /></a>
+					<h2>1.Bind</h2>
+					<p>Bind to the people you want to inherit using his public key</p>
+				</div>
+				<div class="box">
+					<a class="image fit"><img src="images/assign.jpg" title="Designate" alt="" /></a>
+					<h2>2.Designate</h2>
+					<p>Upload the property you want to inherit and designate property distribution</p>
+				</div>
+				<div class="box">
+					<a class="image fit"><img src="images/open.png" title="Inherit" alt="" /></a>
+					<h2>3.Inherit</h2>
+					<p>After predecessor's active status expires, the successor who is designated could make the succession</p>
+				</div>
+			</div>
+		</section>
+
+
+
+	</div>
+
+
+
+	<!-- Scripts -->
+	<script src="assets_account/js/jquery.min.js"></script>
+	<script src="assets_account/js/jquery.poptrox.min.js"></script>
+	<script src="assets_account/js/browser.min.js"></script>
+	<script src="assets_account/js/breakpoints.min.js"></script>
+	<script src="assets_account/js/util.js"></script>
+	<script src="assets_account/js/main.js"></script>
+
+
+
+
+</body>
+
+</html>

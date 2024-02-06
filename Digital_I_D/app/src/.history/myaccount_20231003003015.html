@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>添加背景图片</title>
+  <style>
+    /* 定义包含右侧内容的容器 */
+    .right-content {
+      background-image: url('your-background-image.jpg'); /* 背景图片的URL */
+      background-size: cover; /* 自适应大小 */
+      background-repeat: no-repeat; /* 不重复背景图片 */
+      background-position: center; /* 居中对齐 */
+      padding: 20px; /* 可选，添加内边距以控制内容与背景的距离 */
+    }
+
+    /* 其他样式，根据需要自定义 */
+    .content {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <!-- 左侧内容 -->
+    <h2>左侧内容</h2>
+    <p>这里是左侧内容的文本。</p>
+  </div>
+
+  <!-- 右侧内容容器 -->
+  <div class="right-content">
+    <!-- 右侧内容 -->
+    <h2>右侧内容</h2>
+    <p>这里是右侧内容的文本。</p>
+  </div>
+</body>
+</html>
