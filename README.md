@@ -1,4 +1,4 @@
-# Blockchain project
+# DID(Digital Inheritance Deliverer) , a blockchain project.
 
 ## Introduction
 DID(Digital Inheritance Deliverer) , designed to enable secure digital asset/inheritance delivery capabilities , is a project for ZJU Blockchain Comprehensive Practice.
